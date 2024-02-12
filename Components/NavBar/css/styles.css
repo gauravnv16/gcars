@@ -1,0 +1,17 @@
+.menu {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav {
+    padding: 20px;
+  }
+
+  .menu {
+    display: block;
+  }
+}
