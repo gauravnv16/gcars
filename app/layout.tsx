@@ -22,7 +22,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Experience seamless and reliable car rental services in Chennai, tailored to meet your every travel need with unparalleled convenience and exceptional customer satisfaction"
+          content="Discover hassle-free car rentals in Chennai, offering convenience, reliability, and exceptional service for all your travel adventures."
         />
         <meta
           name="keywords"

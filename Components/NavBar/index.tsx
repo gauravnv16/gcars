@@ -37,7 +37,7 @@ export const NavBar = () => {
       <button className="menu">
         <i className="fas fa-bars text-xl"></i>
       </button>
-      <h1 className="text-xl">Cars</h1>
+      <h2 className="text-xl">Cars</h2>
       <ul className="flex items-center text-sm nav-links">
         {Pages.map((page, index) => (
           <li className="mx-4" key={index}>
