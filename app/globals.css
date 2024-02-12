@@ -19,13 +19,12 @@
 
 * {
   font-family: "dm-sans-regular", sans-serif;
-  font-size: inherit;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 p {
   font-family: "dm-sans-light", sans-serif;
-  /* max-width: 500px; */
-  /* text-align: center; */
 }
 
 h1,
@@ -40,25 +39,65 @@ h6 > * {
 img {
   width: 100%;
 }
-
-.booking-form {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: fit-content;
-  flex-wrap: wrap;
-  position: relative;
-  /* top: -30px; */
-  margin: 10px;
-  /* max-width: 80%; */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
-
-.booking-form article {
-  margin: 10px;
-  width: 250px;
+.booking-form {
+  position: relative;
+  top: -30%;
+}
+.booking-form-heading-main {
+  display: flex;
+  width: fit-content;
+}
+.map {
+  display: none !important;
 }
 @media only screen and (max-width: 500px) {
+  * {
+    font-size: 18px;
+  }
+  .booking-form-section-main {
+    width: 100%;
+  }
+
   .booking-form {
-    display: none;
+    flex-direction: column;
+    text-align: left;
+    position: static;
+  }
+
+  .booking-form-heading-main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .map {
+    display: block !important;
+  }
+
+  .booking-form button {
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+  }
+  .booking-form-input {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  * {
+    font-size: 17px;
+  }
+  .booking-form-section-main {
+    width: 100%;
+  }
+
+  main {
+    padding: 20px;
   }
 }

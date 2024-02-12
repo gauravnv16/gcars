@@ -2,13 +2,14 @@
   display: none;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .nav-links {
     display: none;
   }
 
   .nav {
     padding: 20px;
+    transition: 0.5s ease;
   }
 
   .menu {
