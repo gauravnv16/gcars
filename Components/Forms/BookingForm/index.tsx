@@ -1,6 +1,6 @@
 export const BookingForm = () => {
   return (
-    <article className="bg-white p-1 rounded flex items-center booking-form justify-center">
+    <article className="bg-white p-1 rounded-full flex items-center booking-form justify-center">
       <span className="booking-form-heading-main flex justify-between w-full p-4 px-6">
         <h4 className="booking-form-heading text-sm text-left  uppercase ">
           Plan your trip

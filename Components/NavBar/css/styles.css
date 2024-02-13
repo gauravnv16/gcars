@@ -2,9 +2,24 @@
   display: none;
 }
 
+.nav-links2 {
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
   .nav-links {
     display: none;
+  }
+
+  #nav-links2 {
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 100;
+    transition: 0.5s ease;
   }
 
   .nav {

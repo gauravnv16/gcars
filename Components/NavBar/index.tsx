@@ -6,15 +6,20 @@ function HandleSearch(e: any) {
   const search = document.getElementById("search-cars") as HTMLInputElement;
   const searchIcon = document.getElementById("search-icon") as HTMLInputElement;
   const menu = document.getElementById("menu") as HTMLInputElement;
-  if (search.style.display === "none") {
-    search.style.display = "flex";
-    searchIcon.style.display = "none";
-    menu.style.display = "none";
-  } else {
+  if (searchIcon.style.display === "none") {
+    searchIcon.style.display = "block";
     search.style.display = "none";
-    searchIcon.style.display = "flex";
-    menu.style.display = "flex";
+    menu.style.display = "block";
+  } else {
+    searchIcon.style.display = "none";
+    search.style.display = "block";
+    menu.style.display = "none";
   }
+}
+
+function showMenu() {
+  const navLinks2 = document.getElementById("nav-links2") as HTMLInputElement;
+  navLinks2.classList.toggle("hidden");
 }
 export const NavBar = () => {
   const Pages: {
@@ -48,8 +53,8 @@ export const NavBar = () => {
   ];
 
   return (
-    <nav className="nav py-3 px-20 flex justify-between items-center bg-white">
-      <button className="menu" id="menu">
+    <nav className="nav py-3 px-20 flex justify-between items-center bg-white relative">
+      <button className="menu" id="menu" onClick={showMenu}>
         <i className="fas fa-bars text-xl"></i>
       </button>
       <h2 className="text-xl">Cars</h2>
@@ -77,13 +82,20 @@ export const NavBar = () => {
         <input
           type="text"
           placeholder="Innova Crysta.."
-          className="search focus:outline-none text-xl"
+          className="search focus:outline-none text-sm w-40"
         />
         <i className="fas fa-xmark text-xl" onClick={HandleSearch}></i>
       </section>
       <button className="menu" id="search-icon" onClick={HandleSearch}>
         <i className="fas fa-search text-xl"></i>
       </button>
+      <ul className="text-sm hidden" id="nav-links2">
+        {Pages.map((page, index) => (
+          <li className="m-4 p-2" key={index}>
+            <Link href={page.link}>{page.name}</Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
